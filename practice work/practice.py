@@ -1,25 +1,23 @@
-class Shape:
+class Circle(Shape):
+    def execute(self):
+        if self.validate():
+            self.area()
+        else:
+            print('Validation Failed')
 
-    def __init__(self):
-        self.color = ''
-        self.borderWidth = 0
+    def validate(self):
+        return False
 
-    def set_color(self, c):
-        self.color = c
-
-    def get_color(self):
-        return self.color
-
-    def set_borderWidth(self, bw):
-        self.borderWidth = bw
-
-    def get_borderwidth(self):
-        return self.borderWidth
+    def area(self):#
+        print('shape area method')
 
 
-s = Shape()
-s.set_color("Red")
-s.set_borderWidth(5)
+# Rectangle class
+class Rectangle(shape):
+    def __init__(self,length,width):
+        self.length = length
+        self.width = width
 
-print(s.get_color())
-print(s.get_borderwidth())
+    def validate(self):
+        if self.length > 0 and self.width > 0 :
+            return True

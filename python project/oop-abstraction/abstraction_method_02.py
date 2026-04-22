@@ -8,7 +8,7 @@ class Shape(ABC):
 
 
 class Rectangle(Shape):
-    def __init__(self,length,width):
+    def __init__(self, length, width):
         self.length = length
         self.width = width
 
@@ -17,11 +17,9 @@ class Rectangle(Shape):
 
 
 # Example usage
-r = Rectangle(5,10)
+r = Rectangle(5, 10)
 print("Area of Rectangle:", r.area())
 
-# polymorphism: shape type reference holding Rectangle object
-shape: Shape = Rectangle(5,10)
-print("Area of Rectangle(using shape reference):",shape.area())
-
-
+# Polymorphism: Shape type reference holding Rectangle object
+shape: Shape = Rectangle(5, 10)
+print("Area of Rectangle (using Shape reference):", shape.area())
