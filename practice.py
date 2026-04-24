@@ -1,27 +1,20 @@
-from abc import ABC, abstractmethod
+from operator import index
 
+a = 10
+b = 0
 
-class Shape(ABC):
-    @abstractmethod
-    def area(self):
-        pass
-
-
-class Rectangle(Shape):
-    def __init__(self,length,width):
-        self.length = length
-        self.width = width
-
-    def area(self):
-        return self.length * self.width
-
-
-# Example usage
-r = Rectangle(5,10)
-print("Area of Rectangle:", r.area())
-
-# polymorphism: shape type reference holding Rectangle object
-shape: Shape = Rectangle(5,10)
-print("Area of Rectangle(using shape reference):",shape.area())
+try:
+    c = a/0
+    print('division:',c)
+except IndexError as e:
+    print('TypeError exception:',e)
+except ZeroDivisionError as e:
+    print('ZeroDivisionError exception:', e)
+except Exception as e:
+    print('Exception:',e)
+else:
+    print('in else block')
+finally:
+    print('in finally block')
 
 

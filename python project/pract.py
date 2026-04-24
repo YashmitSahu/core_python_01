@@ -1,4 +1,4 @@
-list = ['a',100, 'abc' , 100.10, True ]
+list = ['a',100, 'abc.txt' , 100.10, True ]
 list_b = list[0:2]
 print(list_b)
 list_c = list[2:4]

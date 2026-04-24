@@ -1,4 +1,4 @@
-list = ['a',100, 'abc' , 100.10, True ]
+list = ['a',100, 'abc.txt' , 100.10, True ]
 
 print (type(list))
 print(list[1])
